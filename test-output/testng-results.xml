@@ -2,28 +2,36 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-26T15:50:38 IST" name="Suite" finished-at="2025-12-26T15:51:33 IST" duration-ms="54462">
+  <suite started-at="2025-12-28T02:36:05 IST" name="Default suite" finished-at="2025-12-28T02:37:08 IST" duration-ms="63439">
     <groups>
     </groups>
-    <test started-at="2025-12-26T15:50:38 IST" name="Test" finished-at="2025-12-26T15:51:33 IST" duration-ms="54462">
-      <class name="scripts.TestCase1">
-        <test-method signature="ContactUs()[pri:0, instance:scripts.TestCase1@6e171cd7]" started-at="2025-12-26T15:50:38 IST" name="ContactUs" finished-at="2025-12-26T15:50:53 IST" duration-ms="14738" status="PASS">
+    <test started-at="2025-12-28T02:36:05 IST" name="Default test" finished-at="2025-12-28T02:37:08 IST" duration-ms="63439">
+      <class name="scriptsTestCase.CountryPageTest">
+        <test-method is-config="true" signature="login()[pri:0, instance:scriptsTestCase.CountryPageTest@14dd9eb7]" started-at="2025-12-28T02:36:05 IST" name="login" finished-at="2025-12-28T02:36:18 IST" duration-ms="13370" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ContactUs -->
-      </class> <!-- scripts.TestCase1 -->
-      <class name="scripts.TestCase2">
-        <test-method signature="ContactUs()[pri:0, instance:scripts.TestCase2@1d9b7cce]" started-at="2025-12-26T15:50:53 IST" name="ContactUs" finished-at="2025-12-26T15:51:10 IST" duration-ms="16542" status="PASS">
+        </test-method> <!-- login -->
+        <test-method signature="EditCountry()[pri:0, instance:scriptsTestCase.CountryPageTest@14dd9eb7]" started-at="2025-12-28T02:36:18 IST" name="EditCountry" finished-at="2025-12-28T02:36:36 IST" duration-ms="18093" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ContactUs -->
-      </class> <!-- scripts.TestCase2 -->
-      <class name="scripts.TestCase3">
-        <test-method signature="AboutUs()[pri:0, instance:scripts.TestCase3@4d9e68d0]" started-at="2025-12-26T15:51:10 IST" name="AboutUs" finished-at="2025-12-26T15:51:33 IST" duration-ms="23146" status="PASS">
+        </test-method> <!-- EditCountry -->
+        <test-method is-config="true" signature="login()[pri:0, instance:scriptsTestCase.CountryPageTest@14dd9eb7]" started-at="2025-12-28T02:36:36 IST" name="login" finished-at="2025-12-28T02:36:49 IST" duration-ms="12573" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AboutUs -->
-      </class> <!-- scripts.TestCase3 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- login -->
+        <test-method signature="testAddCountryWithEmptyFields()[pri:0, instance:scriptsTestCase.CountryPageTest@14dd9eb7]" started-at="2025-12-28T02:36:49 IST" name="testAddCountryWithEmptyFields" finished-at="2025-12-28T02:36:52 IST" duration-ms="3370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddCountryWithEmptyFields -->
+        <test-method is-config="true" signature="login()[pri:0, instance:scriptsTestCase.CountryPageTest@14dd9eb7]" started-at="2025-12-28T02:36:52 IST" name="login" finished-at="2025-12-28T02:37:05 IST" duration-ms="12358" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="testClearButtonFunctionality()[pri:0, instance:scriptsTestCase.CountryPageTest@14dd9eb7]" started-at="2025-12-28T02:37:05 IST" name="testClearButtonFunctionality" finished-at="2025-12-28T02:37:08 IST" duration-ms="3650" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClearButtonFunctionality -->
+      </class> <!-- scriptsTestCase.CountryPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
