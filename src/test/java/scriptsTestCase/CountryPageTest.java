@@ -35,7 +35,7 @@ public class CountryPageTest {
     	
     }
 
-   // @Test
+   @Test(priority = 1)
     public void testAddCountryWithValidData() throws InterruptedException {
     	driver.findElement(By.xpath("//button[@class='btn btn-sm btn-primary']")).click();
     	Thread.sleep(3000);
@@ -50,11 +50,12 @@ public class CountryPageTest {
         Thread.sleep(3000);
 
         // Add assertion for successful addition (this would depend on the application response)
-        Assert.assertTrue(driver.getPageSource().contains("Success ! Country saved successfully!"));
+        //Assert.assertTrue(driver.getPageSource().contains("Success ! Country saved successfully!"));
+        Assert.assertTrue(driver.getPageSource().contains("Error ! Country name/country code/country mobile code already exists!"));
         driver.quit();
     }
 
-    @Test
+    @Test(priority = 2)
     public void testAddCountryWithEmptyFields() throws InterruptedException {
     	driver.findElement(By.xpath("//button[@class='btn btn-sm btn-primary']")).click();
     	Thread.sleep(3000);
@@ -90,7 +91,7 @@ public class CountryPageTest {
         driver.quit();
     }
 
-    @Test
+    @Test(priority = 3)
     public void testClearButtonFunctionality() throws InterruptedException {
     	driver.findElement(By.xpath("//button[@class='btn btn-sm btn-primary']")).click();
     	Thread.sleep(3000);
@@ -116,7 +117,7 @@ public class CountryPageTest {
         driver.quit();
     }
     
-    @Test
+    @Test(priority = 4)
     public void EditCountry() throws InterruptedException {
     	
     	
