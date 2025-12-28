@@ -6,6 +6,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -18,10 +19,15 @@ public class CountryPageTest {
     
     @BeforeMethod
     public void login() throws InterruptedException {
-    	driver=new ChromeDriver();
+    	ChromeOptions options = new ChromeOptions();
+    	options.addArguments("--remote-allow-origins=*");
+    	options.addArguments("--disable-notifications");
+    	options.addArguments("--disable-infobars");
+
+    	driver = new ChromeDriver(options);
+    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     	driver.manage().window().maximize();
     	driver.get("http://bgv.proanto.com/");
-    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     	driver.findElement(By.xpath("//input[@id='UserName']")).sendKeys("Admin");
     	driver.findElement(By.xpath("//input[@id='txtPassword']")).sendKeys("Vishal@123");
     	driver.findElement(By.xpath("//button[@id='submitButton']")).click();
@@ -87,7 +93,7 @@ public class CountryPageTest {
                 .contains("Please Select IsEnabled"),
             "IsEnabled validation message mismatch"
         );
-        
+    	Thread.sleep(3000);
         driver.quit();
     }
 
@@ -113,7 +119,7 @@ public class CountryPageTest {
             select.getFirstSelectedOption().getText(),
             "Select Is Enable"
         );
-
+         Thread.sleep(3000);
         driver.quit();
     }
     
