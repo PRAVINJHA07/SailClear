@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import pom.CountryPage;
 
@@ -137,9 +138,11 @@ public class CountryPageTest {
         Thread.sleep(3000);
         driver.findElement(By.xpath("//button[text()='Update Country']")).click();
         Thread.sleep(3000);
-        Assert.assertTrue(driver.getPageSource().contains("Success ! Country Update successfully!"));
+        SoftAssert s=new SoftAssert();
+        s.assertTrue(driver.getPageSource().contains("Success ! Country Update successfully!"));
 
         Thread.sleep(3000);
         driver.quit();
+        s.assertAll();
     }
 }
