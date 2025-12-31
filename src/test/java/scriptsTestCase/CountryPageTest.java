@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import pom.CountryPage;
 
@@ -59,7 +60,6 @@ public class CountryPageTest {
         //Assert.assertTrue(driver.getPageSource().contains("Success ! Country saved successfully!"));
         Assert.assertTrue(driver.getPageSource().contains("Error ! Country name/country code/country mobile code already exists!"));
         driver.quit();
-        
     }
 
     @Test(priority = 2)
@@ -138,9 +138,11 @@ public class CountryPageTest {
         Thread.sleep(3000);
         driver.findElement(By.xpath("//button[text()='Update Country']")).click();
         Thread.sleep(3000);
-        Assert.assertTrue(driver.getPageSource().contains("Success ! Country Update successfully!"));
+        SoftAssert s=new SoftAssert();
+        s.assertTrue(driver.getPageSource().contains("Success ! Country Update successfully!"));
 
         Thread.sleep(3000);
         driver.quit();
+        s.assertAll();
     }
 }
